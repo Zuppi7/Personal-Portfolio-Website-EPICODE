@@ -1,0 +1,224 @@
+/* Gallery Page Styles */
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url("../images/sfondo_bianconero.jpg");
+  background-position: center 27%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: #fe8c55;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover span {
+  background-color: #fe8c55;
+}
+
+@media (max-width: 480px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+.hamburger:hover span {
+  background-color: #fe8c55;
+}
+
+/* Drawer Overlay */
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1100;
+}
+
+.drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Drawer Menu */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100%;
+  background-color: #000000;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  transition: right 0.3s ease;
+  z-index: 1200;
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+}
+
+.drawer.active {
+  right: 0;
+}
+
+.drawer-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fe8c55;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 0.5rem;
+}
+
+.drawer-close:hover {
+  color: #fe8c55;
+  transform: rotate(90deg);
+}
+
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.drawer-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 0;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.drawer-nav a:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.drawer-nav a:hover,
+.drawer-nav a.active {
+  color: #fe8c55;
+  padding-left: 0.5rem;
+}
+
+.gallery_page {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  min-height: 100vh;
+}
+
+.gallery-main {
+  flex: 1;
+  padding: clamp(2rem, 5vw, 4rem) clamp(2rem, 6vw, 8rem);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.gallery-container {
+  max-width: 1400px;
+  width: 100%;
+}
+
+.gallery-container h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: #fe8c55;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.gallery-intro {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+/* Griglia Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.5rem, 3vw, 2rem);
+  padding: 1rem 0;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-main {
+    padding: 2rem 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-main {
+    padding: 2rem 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
