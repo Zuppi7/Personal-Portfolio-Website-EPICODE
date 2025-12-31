@@ -1,4 +1,4 @@
-# 🎵 ZEE The Don - Portfolio
+# Matteo Zuppiroli | ZEE The Don - Portfolio
 
 Portfolio personale multi-pagina per DJ e Producer, sviluppato come progetto finale per il corso di Web Development di EPICODE.
 
