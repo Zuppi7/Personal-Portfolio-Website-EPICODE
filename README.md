@@ -70,7 +70,7 @@ portfolio/
     └── classic.jpg
 ```
 
-## � Dettagli Tecnici
+## Dettagli Tecnici
 
 ### JavaScript
 
