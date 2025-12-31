@@ -131,7 +131,7 @@ Ogni soluzione è stata studiata, compresa e adattata alle specifiche esigenze d
 **Matteo Zuppiroli**
 
 - GitHub: [@Zuppi7](https://github.com/Zuppi7)
-- Email: matteozuppiroli@gmail.com
+- Email: matteozuppiroli@gmail.com s00026824@epicode.edu.mt
 - Progetto: Portfolio ZEE The Don
 
 ---
